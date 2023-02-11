@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectDisplay } from "../redux/slices/displayCountrySlice";
 
+
 const Weather = () => {
   const [weather, setWeather] = useState();
   let display = useSelector(selectDisplay);
   let latitude = display.capitalInfo.latlng[0];
   let longitude = display.capitalInfo.latlng[1];
+
 
   useEffect(() => {
     const options = {
